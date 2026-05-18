@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saood Nasir Sangle | Cybersecurity Engineer & DevSecOps Architect</title>
+    <title>Saood Nasir Sangle | Cybersecurity & Automation Engineer</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -114,8 +114,8 @@
 
     <header>
         <h1>Saood Nasir Sangle</h1>
-        <div class="subtitle">Cybersecurity Engineer & Automation Architect</div>
-        <p style="margin-bottom: 20px;">Postgraduate Cyber Security student at the University of Surrey with an Electronics Engineering background from Mumbai. Expertly bridging the gap between hardware logic, network-layer infrastructure defense, and cloud service integration via advanced containerization orchestration, infrastructure automation, and secure operational logic.</p>
+        <div class="subtitle">Cybersecurity Student & Automation Developer</div>
+        <p style="margin-bottom: 20px;">Cybersecurity postgraduate student at the University of Surrey with a background in Electronics Engineering from Mumbai. I focus on web application security testing, network defense, and setting up automated workflows using tools like Docker and n8n.</p>
         
         <div class="button-group">
             <a href="https://www.linkedin.com/in/saoodsangle30/" target="_blank" class="cta-button linkedin">
@@ -128,79 +128,81 @@
     </header>
 
     <section>
-        <h2>Technical Arsenal & Core Competencies</h2>
+        <h2>Skills & Tools</h2>
         <div class="grid">
             <div class="card" style="margin-bottom:0;">
-                <h3>Application & Network-Layer Security</h3>
-                <p>Empirical WAF security mapping, stateful token duplication replays, multi-pass decoding bypass evaluation, rule-level log analysis, and firewall/VPN boundary testing strategies.</p>
+                <h3>Security Testing & Networks</h3>
+                <p>Testing Web Application Firewall configurations, parsing logs for rule analysis, evaluating payload behavior, and understanding network protocols and access controls.</p>
                 <div class="tag-container">
-                    <span class="tag">ModSecurity v3</span>
+                    -- Web Security --
+                    <span class="tag">ModSecurity</span>
                     <span class="tag">OWASP CRS</span>
-                    <span class="tag">libinjection</span>
-                    <span class="tag">Network Filtering</span>
+                    <span class="tag">WAF Configuration</span>
                     <span class="tag">Penetration Testing</span>
                 </div>
             </div>
             <div class="card" style="margin-bottom:0;">
-                <h3>Cloud Automation & Infrastructure</h3>
-                <p>Architecting production asynchronous logic flows, container orchestration, programmatic microservices tracking, and establishing isolated secure edge tunneling protocols.</p>
+                <h3>Automation & DevOps</h3>
+                <p>Creating backend automation lines, container management, connecting remote tools via APIs, and handling data formatting and local file storage scripts.</p>
                 <div class="tag-container">
+                    -- Development --
+                    <span class="tag">n8n Workflow</span>
                     <span class="tag">Docker</span>
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">n8n Automation</span>
                     <span class="tag">Cloudflare Tunnels</span>
                     <span class="tag">Python</span>
-                    <span class="tag">Node.js / SQL</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">SQL</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Production Technical Showcases</h2>
+        <h2>Technical Projects</h2>
 
         <div class="card">
             <h3>Flight Report Automation Pipeline — Aviation Oasis</h3>
-            <div class="meta">Production-Grade Asynchronous Automation & Security Architecture</div>
-            <p>Architected and deployed a containerized, stateful asynchronous backend automation workflow designed to ingest unstructured pilot post-flight logs, process payloads through strict validation boundaries, and expose interactive distributed endpoints using secure communication channels.</p>
+            <div class="meta">Workflow Automation & Integration Project</div>
+            <p>I built an automation system using self-hosted n8n to process and verify text logs from pilots automatically, saving hours of manual data entry.</p>
             
-            <h4>Engineered Architecture Workflow:</h4>
+            <h4>How the system works:</h4>
             <ul>
-                <li><strong>Ingestion & AI Structuring:</strong> Established an IMAP listener watching the operations gateway, instantly offloading unstructured texts to OpenRouter API with optimized system prompts executing programmatic JSON schema extraction.</li>
-                <li><strong>Secure Webhook Exposure:</strong> Wrapped local execution instances securely inside a containerized <code>cloudflared</code> daemon (Cloudflare Tunnel), mapping public edge addresses to inner webhooks without opening hazardous inbound router ports on local firewalls.</li>
-                <li><strong>Asynchronous HITL State Machine:</strong> Formulated state freezing routines utilizing n8n context data structures ($execution.resumeUrl) embedded into Telegram callback channels, letting managers review, selectively edit, or reject transactions natively on-screen without active memory leaks.</li>
+                <li><strong>Ingestion:</strong> An IMAP connector monitors the email inbox for new pilot reports and sends the unstructured text to an AI model via the OpenRouter API to extract key values into clean JSON data.</li>
+                <li><strong>Security & Tunneling:</strong> Used Cloudflare Tunnels to safely expose the local webhooks to the internet without opening inbound router ports on the network.</li>
+                <li><strong>Human-in-the-Loop Review:</strong> The system sends the extracted JSON to an interactive Telegram message. The manager can approve, edit data inline, or reject the report straight from their phone.</li>
+                <li><strong>Storage & Feedback:</strong> Approved data runs through a JavaScript cleaning step and writes directly to the disk, followed by an automatic HTML update email sent back to the pilot.</li>
             </ul>
             <div class="tag-container">
-                <span class="tag">n8n Orchestration</span>
+                <span class="tag">n8n Engine</span>
                 <span class="tag">Cloudflare Tunnels</span>
-                <span class="tag">Docker Storage</span>
-                <span class="tag">Python Snippets</span>
-                <span class="tag">Asynchronous Logic</span>
+                <span class="tag">Docker</span>
+                <span class="tag">JavaScript Node</span>
+                <span class="tag">API Integration</span>
             </div>
         </div>
 
         <div class="card">
             <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
-            <div class="meta">Vulnerability Research Lab | University of Surrey | Supervised by Dr. Robert Granger <span class="grade-badge">Awarded Distinction</span></div>
-            <p>Evaluated the perimeter resilience of ModSecurity v3 coupled with OWASP CRS 3.3.7 on Apache 2.4 fronting the Damn Vulnerable Web Application (DVWA). Developed a token-preserving request duplication layer to measure exactly how input transformations distort structural parsing across strict threshold configurations.</p>
+            <div class="meta">MSc Dissertation Project | University of Surrey | Supervised by Dr. Robert Granger <span class="grade-badge">Awarded Distinction</span></div>
+            <p>For my master's dissertation, I set up a local testing lab to evaluate how effectively ModSecurity v3 and the OWASP Core Rule Set (CRS) 3.3.7 block different modified attack payloads in front of the Damn Vulnerable Web Application (DVWA).</p>
             
-            <h4>Empirical Testbed Matrix (Experimental Results)</h4>
+            <h4>Experimental Test Matrix & Results:</h4>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Attack Class</th>
-                            <th>Payload Vector / Obfuscation Style</th>
-                            <th>C1 (PL1/5)</th>
-                            <th>C2 (PL2/10)</th>
-                            <th>C3 (PL3/15)</th>
-                            <th>C4 (PL4/20)</th>
+                            <th>Attack Type</th>
+                            <th>Payload / Obfuscation Style</th>
+                            <th>PL1 (Threshold 5)</th>
+                            <th>PL2 (Threshold 10)</th>
+                            <th>PL3 (Threshold 15)</th>
+                            <th>PL4 (Threshold 20)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>'OR "1"="1</code> (With spaces/folding)</td>
+                            <td><code>'OR "1"="1</code> (Standard Tautology)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -208,7 +210,7 @@
                         </tr>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>/**/OR/**/'1'='1</code> (Inline Comment Padding)</td>
+                            <td><code>/**/OR/**/'1'='1</code> (Inline Comments)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -216,23 +218,23 @@
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct Element Injection)</td>
-                            <td><span class="status-reached">Reached</span></td>
-                            <td><span class="status-reached">Reached</span></td>
+                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct Script)</td>
+                            <td><span class="status-reached">Reached App</span></td>
+                            <td><span class="status-reached">Reached App</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Breakout)</td>
-                            <td><span class="status-reached">Reached</span></td>
-                            <td><span class="status-reached">Reached</span></td>
+                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Event Handler)</td>
+                            <td><span class="status-reached">Reached App</span></td>
+                            <td><span class="status-reached">Reached App</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>CMD</strong></td>
-                            <td><code>127.0.0.1 && whoami</code> (Chained Shell Operator)</td>
+                            <td><code>127.0.0.1 && whoami</code> (Operator Chaining)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -242,65 +244,58 @@
                             <td><strong>CMD</strong></td>
                             <td><code>127.0.0.1%257C uname -a</code> (Double Encoded Pipe)</td>
                             <td><span class="status-blocked">Blocked</span></td>
-                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-reached">Reached App</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
-                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-reached">Reached App</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h4>Core Analytical Contributions:</h4>
+            <h4>Key Findings from the Research:</h4>
             <ul>
-                <li><strong>Libinjection Verification:</strong> Proved signatureless tokenizers cleanly process padded and comment-folded SQLi payloads without relying on upper paranoia configurations.</li>
-                <li><strong>XSS Detection Borders:</strong> Mapped out why DOM breakout rules are deferred until PL3+ to mitigate false positive penalties across harmless public corporate traffic templates.</li>
-                <li><strong>Late-Stage Surfacing Flaws:</strong> Analyzed input transformation sequencing conflicts where multi-pass URL decodings trigger scoring anomalies that result in sub-threshold execution slips.</li>
+                <li><strong>SQLi Protection:</strong> The grammar-aware libinjection rule (#942100) effectively blocks SQL tautologies at base levels, even when comments are used to break standard text filters.</li>
+                <li><strong>XSS Sensitivity:</strong> Reflected XSS rules are intentionally deferred to Paranoia Level 3+ to avoid causing false alarms on normal business web traffic.</li>
+                <li><strong>Normalization Timing:</strong> Double-encoded inputs like <code>%257C</code> bypass mid-tier settings because the character is only fully revealed after the second decoding pass, changing how its anomaly score builds up.</li>
             </ul>
             <div class="tag-container">
                 <span class="tag">ModSecurity v3</span>
                 <span class="tag">OWASP Core Rule Set</span>
-                <span class="tag">Vulnerability Auditing</span>
-                <span class="tag">Firefox DevTools Replay</span>
+                <span class="tag">Log Analysis</span>
+                <span class="tag">Firefox DevTools</span>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Academic Engineering Foundation</h2>
+        <h2>Education</h2>
         <div class="card">
             <h3>MSc in Cyber Security</h3>
-            <div class="meta">University of Surrey, UK | NCSC-Certified Degree Programme | Expected April 2027</div>
-            <p>Engaging in advanced master's training at an officially designated Academic Centre of Excellence in Cyber Security Research (SCCS). The curriculum systematically sharpens core competencies across defensive infrastructure design, software security verification, and advanced threat profiling:</p>
-            
-            <h4>Technical Domain Specializations:</h4>
+            <div class="meta">University of Surrey, UK | GCHQ/NCSC Certified Degree | Expected April 2027</div>
+            <p>Currently studying core fields within an NCSC-certified program at an Academic Centre of Excellence for Cyber Security Research. My coursework covers:</p>
             <ul>
-                <li><strong>Network Security Operations:</strong> Mastering defensive network filtering mechanisms, packet analysis infrastructure, communication protocol vulnerabilities, and perimeter firewall mapping.</li>
-                <li><strong>Secure Systems Architecture & Application Hardening:</strong> Analyzing lower-level application flaws (buffer protection limits, execution constraints), vulnerability mitigation, database shielding strategies, and access control management models.</li>
-                <li><strong>Architectural Thinking for Security:</strong> Structuring enterprise system layouts utilizing modern security design paradigms, evaluating threat mechanics across distributed systems, and mitigating high-risk software architectural errors.</li>
-                <li><strong>Applied Cryptographic Frameworks:</strong> Comprehensive deployment of symmetric/asymmetric data protection primitives, mathematical integrity validation algorithms, hashing structures, and public-key infrastructure configurations.</li>
-                <li><strong>Ethical Hacking & Penetration Testing:</strong> Practical simulation of structured defensive perimeter bypass testing, target vulnerability discovery routines, web platform exploitation scripts, and secure reporting.</li>
-                <li><strong>Digital Forensics & Incident Analysis:</strong> Practical evaluation of system memory dumps, non-destructive file system extraction paradigms, data recovery lifecycles, and reconstructing hostile network execution lines.</li>
-                <li><strong>Cybercrime Analysis & Enterprise Security Governance:</strong> Implementing international operational frameworks (NIST, ISO/IEC 27001), corporate risk asset mapping, threat group behavior modeling, and enterprise compliance planning.</li>
+                <li><strong>Network Security:</strong> Analyzing packet structures, common network vulnerabilities, and standard protocol layers.</li>
+                <li><strong>Secure Systems & Hardening:</strong> Auditing software access controls, application boundary exploits, and system mitigation setups.</li>
+                <li><strong>Architectural Security Design:</strong> Studying safe multi-tier architecture patterns and threat modeling layouts.</li>
+                <li><strong>Applied Cryptography:</strong> Understanding key management, hashing layers, and encryption algorithms.</li>
+                <li><strong>Testing & Forensics:</strong> Hands-on training with penetration testing concepts, system logs, memory inspection, and data recovery steps.</li>
+                <li><strong>Governance & Security Management:</strong> Reviewing standard risk frameworks such as NIST and ISO/IEC 27001.</li>
             </ul>
         </div>
 
         <div class="card">
             <h3>B.E. in Electronics Engineering</h3>
-            <div class="meta">M.H. Saboo Siddik College of Engineering, Mumbai (University of Mumbai) | Graduation: May 2023</div>
-            <p>Four-year professional engineering foundation providing an extensive architectural edge. Merging strict physical hardware engineering backgrounds cleanly with software platform operations:</p>
-            <ul>
-                <li>Advanced analysis of circuit layouts, digital processor microarchitectures, and hardware systems programming.</li>
-                <li>Robust tracking of physical routing paths, system data-buses, and fundamental network communication layer invariants.</li>
-            </ul>
+            <div class="meta">M.H. Saboo Siddik College of Engineering, Mumbai (University of Mumbai) | May 2023</div>
+            <p>Completed a four-year professional engineering degree covering hardware logic circuits, hardware-level programming, network hardware interfaces, and digital logic layouts.</p>
         </div>
 
         <div class="card" style="padding: 15px 24px; margin-bottom: 0;">
-            <p style="margin: 0;"><strong>Professional Credentials:</strong> CompTIA Security+ — <span class="cert-badge">Course Training Completed</span></p>
+            <p style="margin: 0;"><strong>Training:</strong> CompTIA Security+ — Course Training Completed</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Saood Nasir Sangle. Host Engineering Powered by GitHub Pages. | <a href="https://www.linkedin.com/in/saoodsangle30/" target="_blank">LinkedIn</a> | <a href="mailto:contact.saoodsangle@gmail.com">Email Contact</a></p>
+        <p>&copy; 2026 Saood Nasir Sangle. Hosted via GitHub Pages. | <a href="https://www.linkedin.com/in/saoodsangle30/" target="_blank">LinkedIn</a> | <a href="mailto:contact.saoodsangle@gmail.com">Email Contact</a></p>
     </footer>
 
 </body>
