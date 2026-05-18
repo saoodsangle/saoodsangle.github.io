@@ -12,7 +12,9 @@
             --text-bright: #f0f6fc;
             --accent-color: #58a6ff;
             --border-color: #30363d;
-            --success-color: #238636;
+            --success-color: #2da44e;
+            --danger-color: #f85149;
+            --warning-color: #d29922;
         }
 
         body {
@@ -20,7 +22,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -31,209 +33,199 @@
             margin-bottom: 40px;
         }
 
-        h1 {
-            color: var(--text-bright);
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-        }
-
-        h2 {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-top: 40px;
-        }
-
-        h3 {
-            color: var(--text-bright);
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            margin: 0 0 15px 0;
-            font-weight: 500;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: 1fr 1fr; }
-        }
+        h1 { color: var(--text-bright); font-size: 2.5rem; margin: 0 0 10px 0; }
+        h2 { color: var(--accent-color); font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-top: 40px; }
+        h3 { color: var(--text-bright); margin-bottom: 5px; }
+        h4 { color: var(--text-bright); margin-top: 20px; margin-bottom: 10px; font-size: 1.1rem; }
+        
+        .subtitle { font-size: 1.2rem; color: var(--accent-color); margin: 0 0 15px 0; font-weight: 500; }
+        .meta { font-size: 0.9rem; color: #8b949e; margin-bottom: 15px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
 
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 20px;
+            padding: 24px;
+            margin-bottom: 25px;
             transition: transform 0.2s, border-color 0.2s;
         }
+        .card:hover { border-color: var(--accent-color); }
 
-        .card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-color);
-        }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { background-color: #21262d; border: 1px solid var(--border-color); color: var(--text-color); padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; font-family: monospace; }
+        
+        .cert-badge { background-color: rgba(88, 166, 255, 0.1); color: var(--accent-color); border: 1px solid rgba(88, 166, 255, 0.2); padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; display: inline-block; }
 
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .tag {
-            background-color: #21262d;
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-family: monospace;
-        }
-
-        .cert-badge {
-            background-color: rgba(88, 166, 255, 0.1);
-            color: var(--accent-color);
-            border: 1px solid rgba(88, 166, 255, 0.2);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .meta {
-            font-size: 0.9rem;
-            color: #8b949e;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #8b949e;
-        }
+        .table-container { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-color); border-radius: 6px; }
+        table { width: 100%; border-collapse: collapse; background-color: var(--card-bg); text-align: left; }
+        th, td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); font-size: 0.92rem; }
+        th { background-color: #1f242c; color: var(--text-bright); font-weight: 600; }
+        tr:last-child td { border-bottom: none; }
+        
+        .status-blocked { color: var(--danger-color); font-weight: 600; font-family: monospace; background: rgba(248, 81, 73, 0.1); padding: 2px 6px; border-radius: 4px; }
+        .status-reached { color: var(--success-color); font-weight: 600; font-family: monospace; background: rgba(45, 164, 78, 0.1); padding: 2px 6px; border-radius: 4px; }
+        
+        ul { padding-left: 20px; margin: 10px 0; }
+        li { margin-bottom: 8px; }
+        footer { margin-top: 60px; border-top: 1px solid var(--border-color); padding-top: 20px; text-align: center; font-size: 0.9rem; color: #8b949e; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Saood Nasir Sangle</h1>
-        <div class="subtitle">Cybersecurity Engineer & Automation Researcher</div>
-        <p>Postgraduate Cyber Security student at the University of Surrey with an electronics engineering background. Passionate about web application defense, penetration testing, and implementing secure DevSecOps pipelines through containerized workflows and advanced workflow automation.</p>
+        <div class="subtitle">Cybersecurity Engineer & Automation Architect</div>
+        <p>Postgraduate Cyber Security graduate from the University of Surrey with an engineering background. Specialized in application layer security, perimeter defense optimization, and architecting resilient DevSecOps automation engines with structured human-in-the-loop control logic.</p>
     </header>
 
     <section>
-        <h2>Core Technical Expertise</h2>
+        <h2>Technical Arsenal</h2>
         <div class="grid">
-            <div class="card">
-                <h3>Application Security</h3>
-                <p>Analyzing Web Application Firewall (WAF) rule sets, payload obfuscation vectors, and bypassing defenses to strengthen security controls.</p>
+            <div class="card" style="margin-bottom:0;">
+                <h3>Defensive & Security Research</h3>
+                <p>Empirical WAF parameter tuning, normalization order payload bypass analysis, rule-level log attribution, and perimeter protection mechanics.</p>
                 <div class="tag-container">
-                    <span class="tag">ModSecurity</span>
-                    <span class="tag">OWASP Top 10</span>
-                    <span class="tag">WAF Resilience</span>
-                    <span class="tag">Penetration Testing</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>DevOps & Infrastructure Automation</h3>
-                <p>Building secure, scalable orchestration environments and custom automated pipelines to optimize data processing and operational workflows.</p>
-                <div class="tag-container">
-                    <span class="tag">Docker</span>
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">n8n Automation</span>
-                    <span class="tag">Git / GitHub</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Languages & Databases</h3>
-                <p>Developing secure backend logic, system integrations, and structured data handling frameworks.</p>
-                <div class="tag-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">VS Code</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Core Security & Systems</h3>
-                <p>Understanding underlying hardware logic, foundational network layouts, and secure administrative operations.</p>
-                <div class="tag-container">
-                    <span class="tag">Linux</span>
+                    <span class="tag">ModSecurity v3</span>
+                    <span class="tag">OWASP CRS</span>
+                    <span class="tag">libinjection</span>
                     <span class="tag">Network Security</span>
-                    <span class="tag">Hardware Logic</span>
+                </div>
+            </div>
+            <div class="card" style="margin-bottom:0;">
+                <h3>DevSecOps & Automation</h3>
+                <p>Designing asynchronous data pipelines, implementing isolated runtime environments, and establishing secure remote networking tunnels.</p>
+                <div class="tag-container">
+                    <span class="tag">n8n Engine</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Cloudflare Tunnels</span>
+                    <span class="tag">Node.js / Python</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Academic & Professional Projects</h2>
-        
-        <div class="card" style="margin-bottom: 20px;">
-            <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
-            <div class="meta">MSc Dissertation | University of Surrey</div>
-            <p>Designed and built an isolated testbed architecture to benchmark Web Application Firewalls (specifically ModSecurity). Evaluated how effectively modern rule sets withstand complex, multi-layered obfuscation payloads, identifying coverage gaps and documenting edge-case detection failures.</p>
-            <div class="tag-container">
-                <span class="tag">ModSecurity Testing</span>
-                <span class="tag">Payload Obfuscation</span>
-                <span class="tag">Defensive Engineering</span>
-            </div>
-        </div>
+        <h2>Production Technical Showcases</h2>
 
-        <div class="card" style="margin-bottom: 20px;">
-            <h3>Automated OSINT & Media Processing Pipeline</h3>
-            <div class="meta">Independent Engineering Project</div>
-            <p>Architected a secure backend engine using Node.js to automatically harvest, aggregate, and verify real-world data feeds, streamlining asset production pipelines via structured automation.</p>
+        <div class="card">
+            <h3>Flight Report Automation Pipeline — Aviation Oasis</h3>
+            <div class="meta">Production-Grade Asynchronous Automation & Security Architecture</div>
+            <p>Architected and deployed a containerized, stateful asynchronous backend automation workflow designed to ingest unstructured pilot post-flight logs, process payloads through strict validation validation boundaries, and expose interactive distributed endpoints using secure communication channels.</p>
+            
+            <h4>Engineered Architecture Workflow:</h4>
+            <ul>
+                <li><strong>Ingestion & AI Structuring:</strong> Established an IMAP listener watching the operations gateway, instantly offloading unstructured texts to OpenRouter API with optimized system prompts executing programmatic JSON schema extraction.</li>
+                <li><strong>Secure Webhook Exposure:</strong> Wrapped local execution instances securely inside a containerized <code>cloudflared</code> daemon (Cloudflare Tunnel), mapping public edge addresses to inner webhooks without opening hazardous inbound router ports on local firewalls.</li>
+                <li><strong>Asynchronous HITL State Machine:</strong> Formulated state freezing routines utilizing n8n context data structures (<code>$execution.resumeUrl</code>) embedded into Telegram callback channels, letting managers review, selectively edit, or reject transactions natively on-screen without active memory leaks.</li>
+            </ul>
             <div class="tag-container">
-                <span class="tag">Automation</span>
-                <span class="tag">Data Verification</span>
-                <span class="tag">Node.js</span>
+                <span class="tag">n8n Orchestration</span>
+                <span class="tag">Cloudflare Tunnels</span>
+                <span class="tag">Docker Storage</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Asynchronous Logic</span>
             </div>
         </div>
 
         <div class="card">
-            <h3>Advanced Workflow Automation Engine</h3>
-            <div class="meta">Infrastructure & Integration Project</div>
-            <p>Designed and deployed custom automated workflows using n8n to integrate third-party APIs, orchestrate data streams, and build automated verification checks. Explored containerization concepts to ensure smooth deployment across modern cloud infrastructure.</p>
+            <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
+            <div class="meta">MSc Dissertation | University of Surrey | Supervised by Dr. Robert Granger</div>
+            <p>Evaluated the perimeter resilience of ModSecurity v3 coupled with OWASP CRS 3.3.7 on Apache 2.4 fronting the Damn Vulnerable Web Application (DVWA). Developed a token-preserving request duplication layer to measure exactly how input transformations distort structural parsing across strict threshold configurations[cite: 17, 18].</p>
+            
+            <h4>Empirical Testbed Matrix (Experimental Results)</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attack Class</th>
+                            <th>Payload Vector / Obfuscation Style</th>
+                            <th>C1 (PL1/5)</th>
+                            <th>C2 (PL2/10)</th>
+                            <th>C3 (PL3/15)</th>
+                            <th>C4 (PL4/20)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SQLi</strong></td>
+                            <td><code>'OR "1"="1</code> (Canonical Tautology) [cite: 380]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SQLi</strong></td>
+                            <td><code>/**/OR/**/'1'='1</code> (Comment Padding) [cite: 380]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XSS</strong></td>
+                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct) [cite: 380]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XSS</strong></td>
+                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Event) [cite: 380]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CMD</strong></td>
+                            <td><code>127.0.0.1 && whoami</code> (Chained Operator) [cite: 380]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CMD</strong></td>
+                            <td><code>127.0.0.1%257C uname -a</code> (Double Encoded Pipe) [cite: 380]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4>Core Analytical Contributions:</h4>
+            <ul>
+                <li><strong>Libinjection Verification:</strong> Proved signatureless tokenizers cleanly process padded and comment-folded SQLi payloads without relying on upper paranoia configurations[cite: 217, 657].</li>
+                <li><strong>XSS Detection Borders:</strong> Mapped out why DOM breakout rules are deferred until PL3+ to mitigate false positive penalties across harmless public corporate traffic templates[cite: 211, 667].</li>
+                <li><strong>Late-Stage Surfacing Flaws:</strong> Analyzed input transformation sequencing conflicts where multi-pass URL decodings (e.g., <code>%257C</code>) trigger scoring anomalies that result in sub-threshold execution slips[cite: 229, 681, 683].</li>
+            </ul>
             <div class="tag-container">
-                <span class="tag">n8n Workflow</span>
-                <span class="tag">Docker</span>
-                <span class="tag">API Integration</span>
-                <span class="tag">Infrastructure</span>
+                <span class="tag">ModSecurity v3</span>
+                <span class="tag">OWASP Core Rule Set</span>
+                <span class="tag">Vulnerability Auditing</span>
+                <span class="tag">Input Normalization</span>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Education & Qualifications</h2>
+        <h2>Education & Credentials</h2>
         <ul>
             <li>
-                <strong>MSc in Cyber Security</strong> — University of Surrey, UK
-                <div class="meta">Focused on advanced network security, penetration testing, and information security management.</div>
+                <strong>MSc in Cyber Security</strong> — University of Surrey, UK [Academic Year 2024-2025] [cite: 1]
+                <div class="meta">Specialized in cryptographic principles, defensive system engineering, network analytics, and infrastructure compliance.</div>
             </li>
             <li>
                 <strong>B.E. in Electronics Engineering</strong> — India
-                <div class="meta">Core engineering foundation covering hardware logic, systems programming, and technical architecture.</div>
+                <div class="meta">Core engineering principles covering processor microarchitecture, digital logic design, and physical networking constraints.</div>
             </li>
             <li>
                 <strong>CompTIA Security+</strong> — <span class="cert-badge">Course Training Completed</span>
@@ -242,7 +234,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Saood Nasir Sangle. Built completely free via GitHub Pages.</p>
+        <p>&copy; 2026 Saood Nasir Sangle. Host Engineering Powered by GitHub Pages.</p>
     </footer>
 
 </body>
