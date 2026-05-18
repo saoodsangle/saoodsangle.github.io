@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saood Nasir Sangle | Cybersecurity & Automation Engineer</title>
+    <title>Saood Nasir Sangle | Cyber Security & Automation Engineer</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -49,12 +49,28 @@
             border-radius: 6px;
             padding: 24px;
             margin-bottom: 25px;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
         }
-        .card:hover { border-color: var(--accent-color); }
+        .card:hover { 
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
+        }
 
         .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background-color: #21262d; border: 1px solid var(--border-color); color: var(--text-color); padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; font-family: monospace; }
+        .tag { 
+            background-color: #21262d; 
+            border: 1px solid var(--border-color); 
+            color: var(--text-color); 
+            padding: 3px 10px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            font-family: monospace;
+            transition: border-color 0.2s;
+        }
+        .tag:hover {
+            border-color: var(--accent-color);
+        }
         
         .cert-badge { background-color: rgba(88, 166, 255, 0.1); color: var(--accent-color); border: 1px solid rgba(88, 166, 255, 0.2); padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; display: inline-block; }
         .grade-badge { background-color: rgba(45, 164, 78, 0.1); color: var(--success-color); border: 1px solid rgba(45, 164, 78, 0.2); padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-left: 5px; }
@@ -76,7 +92,10 @@
             font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-1px);
         }
         
         .cta-button svg {
@@ -86,25 +105,34 @@
             fill: currentColor;
         }
         
-        .cta-button.linkedin { color: #58a6ff; }
+        .cta-button.linkedin { 
+            color: #58a6ff; 
+            border-color: rgba(88, 166, 255, 0.3);
+        }
         .cta-button.linkedin:hover {
-            background-color: #238636;
+            background-color: #0a66c2;
             color: var(--text-bright);
-            border-color: #2da44e;
+            border-color: #0a66c2;
         }
 
-        .cta-button.github { color: #c9d1d9; }
+        .cta-button.github { 
+            color: #c9d1d9;
+            border-color: var(--border-color);
+        }
         .cta-button.github:hover {
             background-color: #30363d;
             border-color: #8b949e;
             color: var(--text-bright);
         }
 
-        .cta-button.email { color: #f2c744; }
+        .cta-button.email { 
+            color: #f2c744; 
+            border-color: rgba(242, 199, 68, 0.3);
+        }
         .cta-button.email:hover {
-            background-color: #21262d;
-            border-color: #58a6ff;
-            color: #58a6ff;
+            background-color: #f2c744;
+            border-color: #f2c744;
+            color: #0d1117;
         }
 
         .table-container { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-color); border-radius: 6px; }
@@ -127,8 +155,8 @@
 
     <header>
         <h1>Saood Nasir Sangle</h1>
-        <div class="subtitle">Cybersecurity Student & Automation Developer</div>
-        <p style="margin-bottom: 20px;">Cybersecurity postgraduate student at the University of Surrey with a background in Electronics Engineering from Mumbai. I focus on web application security testing, network defense, and setting up automated workflows using tools like Docker and n8n.</p>
+        <div class="subtitle">Cyber Security Student & Automation Developer</div>
+        <p style="margin-bottom: 20px;">Cyber Security postgraduate student at the University of Surrey with a background in Electronics Engineering from Mumbai. I focus on web application security testing, network defense, and setting up automated workflows using tools like Docker and n8n.</p>
         
         <div class="button-group">
             <a href="https://www.linkedin.com/in/saoodsangle30/" target="_blank" class="cta-button linkedin">
