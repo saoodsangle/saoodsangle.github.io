@@ -5,31 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saood Nasir Sangle | Cybersecurity Portfolio</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; background-color: #f9f9f9; }
-        h1 { color: #111; border-bottom: 2px solid #0070f3; padding-bottom: 10px; }
-        h2 { color: #0070f3; margin-top: 30px; }
-        .badge { background: #e1f5fe; color: #0288d1; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.9em; display: inline-block; margin-right: 10px; }
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-bright: #f0f6fc;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+            --success-color: #238636;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--text-bright);
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--text-bright);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin: 0 0 15px 0;
+            font-weight: 500;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        .cert-badge {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
     </style>
 </head>
 <body>
-    <h1>Saood Nasir Sangle</h1>
-    <p><strong>Cybersecurity Engineer & Researcher</strong></p>
-    <p>Electronics Engineering graduate from India, currently pursuing an MSc in Cyber Security at the University of Surrey, UK. Specializing in web application firewall (WAF) resilience, penetration testing, and secure automation.</p>
-    
-    <h2>Education & Qualifications</h2>
-    <ul>
-        <li><strong>MSc in Cyber Security</strong> - University of Surrey, UK</li>
-        <li><strong>B.E. in Electronics Engineering</strong> - India</li>
-        <li><strong>CompTIA Security+</strong> - Course Training Completed</li>
-    </ul>
 
-    <h2>Featured Research & Projects</h2>
-    <ul>
-        <li><strong>Master's Dissertation:</strong> Analyzing WAF Resilience Against Obfuscated Attack Payloads (ModSecurity testing and deep-dive payload analysis).</li>
-        <li><strong>Aviation News & Video Automation System:</strong> Building automated data harvesting pipelines and secure content workflows.</li>
-    </ul>
-    
-    <hr>
-    <p><em>Website currently under construction. Stay tuned!</em></p>
+    <header>
+        <h1>Saood Nasir Sangle</h1>
+        <div class="subtitle">Cybersecurity Engineer & Researcher</div>
+        <p>Postgraduate Cyber Security student at the University of Surrey with an engineering background. Passionate about web application defense, penetration testing, and securely scaling automated intelligence systems.</p>
+    </header>
+
+    <section>
+        <h2>Core Technical Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Application Security</h3>
+                <p>Analyzing Web Application Firewall (WAF) rule sets, payload obfuscation vectors, and bypassing defenses to strengthen security controls.</p>
+                <div class="tag-container">
+                    <span class="tag">ModSecurity</span>
+                    <span class="tag">OWASP Top 10</span>
+                    <span class="tag">WAF Resilience</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Tools & Automation</h3>
+                <p>Developing data harvesting pipelines, defensive auditing tasks, and secure backend workflows using engineering standards.</p>
+                <div class="tag-container">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Git/GitHub</span>
+                    <span class="tag">VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Academic & Professional Projects</h2>
+        
+        <div class="card" style="margin-bottom: 20px;">
+            <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
+            <div class="meta">MSc Dissertation | University of Surrey</div>
+            <p>Designed and built an isolated testbed architecture to benchmark Web Application Firewalls (specifically ModSecurity). Evaluated how effectively modern rule sets withstand complex, multi-layered obfuscation payloads, identifying coverage gaps and documenting edge-case detection failures.</p>
+            <div class="tag-container">
+                <span class="tag">Penetration Testing</span>
+                <span class="tag">Payload Obfuscation</span>
+                <span class="tag">Defensive Engineering</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Automated OSINT & Media Processing Pipeline</h3>
+            <div class="meta">Independent Engineering Project</div>
+            <p>Architected a secure backend engine using Node.js to automatically harvest, aggregate, and verify real-world data feeds, streamlining asset production pipelines via structured automation.</p>
+            <div class="tag-container">
+                <span class="tag">Automation</span>
+                <span class="tag">Data Verification</span>
+                <span class="tag">Node.js</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education & Qualifications</h2>
+        <ul>
+            <li>
+                <strong>MSc in Cyber Security</strong> — University of Surrey, UK
+                <div class="meta">Focused on advanced network security, penetration testing, and information security management.</div>
+            </li>
+            <li>
+                <strong>B.E. in Electronics Engineering</strong> — India
+                <div class="meta">Core engineering foundation covering hardware logic, systems programming, and technical architecture.</div>
+            </li>
+            <li>
+                <strong>CompTIA Security+</strong> — <span class="cert-badge">Course Training Completed</span>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Saood Nasir Sangle. Built completely free via GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
