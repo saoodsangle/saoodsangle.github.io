@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saood Nasir Sangle | Cybersecurity Portfolio</title>
+    <title>Saood Nasir Sangle | Cybersecurity Engineer & DevSecOps Architect</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -14,7 +14,6 @@
             --border-color: #30363d;
             --success-color: #2da44e;
             --danger-color: #f85149;
-            --warning-color: #d29922;
         }
 
         body {
@@ -22,7 +21,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -78,30 +77,34 @@
     <header>
         <h1>Saood Nasir Sangle</h1>
         <div class="subtitle">Cybersecurity Engineer & Automation Architect</div>
-        <p>Postgraduate Cyber Security student at the University of Surrey with an engineering background. Specialized in application layer security, perimeter defense optimization, and architecting resilient DevSecOps automation engines with structured human-in-the-loop control logic.</p>
+        <p>Postgraduate Cyber Security student at the University of Surrey with an Electronics Engineering background from Mumbai. Expertly bridging the gap between hardware logic, application perimeter protection, and enterprise cloud infrastructure via advanced automation, containerization orchestration, and programmatic DevSecOps tools.</p>
     </header>
 
     <section>
-        <h2>Technical Arsenal</h2>
+        <h2>Technical Arsenal & Core Competencies</h2>
         <div class="grid">
             <div class="card" style="margin-bottom:0;">
-                <h3>Defensive & Security Research</h3>
-                <p>Empirical WAF parameter tuning, normalization order payload bypass analysis, rule-level log attribution, and perimeter protection mechanics.</p>
+                <h3>Application Security & Offensive Auditing</h3>
+                <p>Empirical WAF boundary mapping, stateful request replaying, multi-pass encoding bypass analysis, rule-level attribution log tracking, and OWASP Top 10 vulnerability remediation patterns.</p>
                 <div class="tag-container">
                     <span class="tag">ModSecurity v3</span>
                     <span class="tag">OWASP CRS</span>
                     <span class="tag">libinjection</span>
-                    <span class="tag">Network Security</span>
+                    <span class="tag">Ethical Hacking</span>
+                    <span class="tag">Penetration Testing</span>
                 </div>
             </div>
             <div class="card" style="margin-bottom:0;">
-                <h3>DevOps & Automation</h3>
-                <p>Designing asynchronous data pipelines, implementing isolated runtime environments, and establishing secure remote networking tunnels.</p>
+                <h3>DevSecOps, Containers & Cloud Automation</h3>
+                <p>Orchestrating production-grade asynchronous logic workflows, managing microservices with high-availability container layers, and setting up isolated network tunneling protocols.</p>
                 <div class="tag-container">
-                    <span class="tag">n8n Engine</span>
                     <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">n8n Automation</span>
                     <span class="tag">Cloudflare Tunnels</span>
-                    <span class="tag">Node.js / Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">SQL</span>
                 </div>
             </div>
         </div>
@@ -125,14 +128,14 @@
                 <span class="tag">n8n Orchestration</span>
                 <span class="tag">Cloudflare Tunnels</span>
                 <span class="tag">Docker Storage</span>
-                <span class="tag">API Integration</span>
+                <span class="tag">Python Snippets</span>
                 <span class="tag">Asynchronous Logic</span>
             </div>
         </div>
 
         <div class="card">
             <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
-            <div class="meta">MSc Dissertation | University of Surrey | Supervised by Dr. Robert Granger</div>
+            <div class="meta">Vulnerability Research Lab | University of Surrey | Supervised by Dr. Robert Granger</div>
             <p>Evaluated the perimeter resilience of ModSecurity v3 coupled with OWASP CRS 3.3.7 on Apache 2.4 fronting the Damn Vulnerable Web Application (DVWA). Developed a token-preserving request duplication layer to measure exactly how input transformations distort structural parsing across strict threshold configurations.</p>
             
             <h4>Empirical Testbed Matrix (Experimental Results)</h4>
@@ -151,7 +154,7 @@
                     <tbody>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>'OR "1"="1</code> (Canonical Tautology)</td>
+                            <td><code>'OR "1"="1</code> (With spaces/folding)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -159,7 +162,7 @@
                         </tr>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>/**/OR/**/'1'='1</code> (Comment Padding)</td>
+                            <td><code>/**/OR/**/'1'='1</code> (Inline Comment Padding)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -167,7 +170,7 @@
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct)</td>
+                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct Element Injection)</td>
                             <td><span class="status-reached">Reached</span></td>
                             <td><span class="status-reached">Reached</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -175,7 +178,7 @@
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Event)</td>
+                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Breakout)</td>
                             <td><span class="status-reached">Reached</span></td>
                             <td><span class="status-reached">Reached</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -183,7 +186,7 @@
                         </tr>
                         <tr>
                             <td><strong>CMD</strong></td>
-                            <td><code>127.0.0.1 && whoami</code> (Chained Operator)</td>
+                            <td><code>127.0.0.1 && whoami</code> (Chained Shell Operator)</td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
                             <td><span class="status-blocked">Blocked</span></td>
@@ -211,26 +214,39 @@
                 <span class="tag">ModSecurity v3</span>
                 <span class="tag">OWASP Core Rule Set</span>
                 <span class="tag">Vulnerability Auditing</span>
-                <span class="tag">Input Normalization</span>
+                <span class="tag">Firefox DevTools Replay</span>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Education & Credentials</h2>
-        <ul>
-            <li>
-                <strong>MSc in Cyber Security</strong> — University of Surrey, UK [Expected Graduation: April 2027]
-                <div class="meta">Specializing in cryptographic principles, defensive system engineering, network analytics, and infrastructure compliance.</div>
-            </li>
-            <li>
-                <strong>B.E. in Electronics Engineering</strong> — India
-                <div class="meta">Core engineering principles covering processor microarchitecture, digital logic design, and physical networking constraints.</div>
-            </li>
-            <li>
-                <strong>CompTIA Security+</strong> — <span class="cert-badge">Course Training Completed</span>
-            </li>
-        </ul>
+        <h2>Academic Background & Module Training</h2>
+        <div class="card">
+            <h3>MSc in Cyber Security</h3>
+            <div class="meta">University of Surrey, UK | Expected Graduation: April 2027</div>
+            <p>Enrolled within a fully NCSC-certified program at an Academic Centre of Excellence in Cyber Security Research (SCCS). Developing domain specializations backed by intensive hands-on lab training across essential core modules:</p>
+            <div class="tag-container" style="margin-bottom: 15px;">
+                <span class="tag">Ethical Hacking & Pentesting</span>
+                <span class="tag">Cloud Security & Infrastructure Automation</span>
+                <span class="tag">Information Security Management & Governance</span>
+                <span class="tag">Cybercrime & Cybersecurity Frameworks</span>
+                <span class="tag">Systems Verification & Formal Hardware Logic</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>B.E. in Electronics Engineering</h3>
+            <div class="meta">M.H. Saboo Siddik College of Engineering, Mumbai (University of Mumbai) | Graduation: May 2023</div>
+            <p>Four-year professional engineering foundation providing an extensive architectural edge. Merging strict physical hardware engineering backgrounds cleanly with software platform operations:</p>
+            <ul>
+                <li>Advanced analysis of circuit layouts, digital processor microarchitectures, and hardware systems programming.</li>
+                <li>Robust tracking of physical routing paths, system data-buses, and fundamental network communication layer invariants.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="padding: 15px 24px; margin-bottom: 0;">
+            <p style="margin: 0;"><strong>Professional Credentials:</strong> CompTIA Security+ — <span class="cert-badge">Course Training Completed</span></p>
+        </div>
     </section>
 
     <footer>
