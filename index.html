@@ -182,7 +182,7 @@
         <div class="card">
             <h3>Analyzing WAF Resilience Against Obfuscated Attack Payloads</h3>
             <div class="meta">Vulnerability Research Lab | University of Surrey | Supervised by Dr. Robert Granger <span class="grade-badge">Awarded Distinction</span></div>
-            <p>Evaluated the perimeter resilience of ModSecurity v3 coupled with OWASP CRS 3.3.7 on Apache 2.4 fronting the Damn Vulnerable Web Application (DVWA). Developed a token-preserving request duplication layer to measure exactly how input transformations distort structural parsing across strict threshold configurations[cite: 17, 18].</p>
+            <p>Evaluated the perimeter resilience of ModSecurity v3 coupled with OWASP CRS 3.3.7 on Apache 2.4 fronting the Damn Vulnerable Web Application (DVWA). Developed a token-preserving request duplication layer to measure exactly how input transformations distort structural parsing across strict threshold configurations.</p>
             
             <h4>Empirical Testbed Matrix (Experimental Results)</h4>
             <div class="table-container">
@@ -200,51 +200,51 @@
                     <tbody>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>'OR "1"="1</code> (With spaces/folding) [cite: 380]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><code>'OR "1"="1</code> (With spaces/folding)</td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>SQLi</strong></td>
-                            <td><code>/**/OR/**/'1'='1</code> (Inline Comment Padding) [cite: 380]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><code>/**/OR/**/'1'='1</code> (Inline Comment Padding)</td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct Element Injection) [cite: 380]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (Direct Element Injection)</td>
+                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>XSS</strong></td>
-                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Breakout) [cite: 380]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><code>&lt;img src=x onerror=alert(1)&gt;</code> (Attribute Breakout)</td>
+                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>CMD</strong></td>
-                            <td><code>127.0.0.1 && whoami</code> (Chained Shell Operator) [cite: 380]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
+                            <td><code>127.0.0.1 && whoami</code> (Chained Shell Operator)</td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
                         </tr>
                         <tr>
                             <td><strong>CMD</strong></td>
-                            <td><code>127.0.0.1%257C uname -a</code> (Double Encoded Pipe) [cite: 380]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
-                            <td><span class="status-blocked">Blocked</span> [cite: 663]</td>
-                            <td><span class="status-reached">Reached</span> [cite: 663]</td>
+                            <td><code>127.0.0.1%257C uname -a</code> (Double Encoded Pipe)</td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-reached">Reached</span></td>
+                            <td><span class="status-blocked">Blocked</span></td>
+                            <td><span class="status-reached">Reached</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -252,9 +252,9 @@
 
             <h4>Core Analytical Contributions:</h4>
             <ul>
-                <li><strong>Libinjection Verification:</strong> Proved signatureless tokenizers cleanly process padded and comment-folded SQLi payloads without relying on upper paranoia configurations[cite: 22, 217].</li>
-                <li><strong>XSS Detection Borders:</strong> Mapped out why DOM breakout rules are deferred until PL3+ to mitigate false positive penalties across harmless public corporate traffic templates[cite: 23, 667].</li>
-                <li><strong>Late-Stage Surfacing Flaws:</strong> Analyzed input transformation sequencing conflicts where multi-pass URL decodings trigger scoring anomalies that result in sub-threshold execution slips[cite: 229, 239].</li>
+                <li><strong>Libinjection Verification:</strong> Proved signatureless tokenizers cleanly process padded and comment-folded SQLi payloads without relying on upper paranoia configurations.</li>
+                <li><strong>XSS Detection Borders:</strong> Mapped out why DOM breakout rules are deferred until PL3+ to mitigate false positive penalties across harmless public corporate traffic templates.</li>
+                <li><strong>Late-Stage Surfacing Flaws:</strong> Analyzed input transformation sequencing conflicts where multi-pass URL decodings trigger scoring anomalies that result in sub-threshold execution slips.</li>
             </ul>
             <div class="tag-container">
                 <span class="tag">ModSecurity v3</span>
@@ -270,17 +270,17 @@
         <div class="card">
             <h3>MSc in Cyber Security</h3>
             <div class="meta">University of Surrey, UK | NCSC-Certified Degree Programme | Expected April 2027</div>
-            <p>Engaging in advanced master's training at an officially designated Academic Centre of Excellence in Cyber Security Research (SCCS)[cite: 1, 2]. The curriculum systematically sharpens core competencies across defensive infrastructure design, software security verification, and advanced threat profiling:</p>
+            <p>Engaging in advanced master's training at an officially designated Academic Centre of Excellence in Cyber Security Research (SCCS). The curriculum systematically sharpens core competencies across defensive infrastructure design, software security verification, and advanced threat profiling:</p>
             
             <h4>Technical Domain Specializations:</h4>
             <ul>
-                <li><strong>Network Security Operations:</strong> Mastering defensive network filtering mechanisms, packet analysis infrastructure, communication protocol vulnerabilities, and perimeter firewall mapping[cite: 815].</li>
-                <li><strong>Secure Systems Architecture & Application Hardening:</strong> Analyzing lower-level application flaws (buffer protection limits, execution constraints), vulnerability mitigation, database shielding strategies, and access control management models[cite: 815].</li>
+                <li><strong>Network Security Operations:</strong> Mastering defensive network filtering mechanisms, packet analysis infrastructure, communication protocol vulnerabilities, and perimeter firewall mapping.</li>
+                <li><strong>Secure Systems Architecture & Application Hardening:</strong> Analyzing lower-level application flaws (buffer protection limits, execution constraints), vulnerability mitigation, database shielding strategies, and access control management models.</li>
                 <li><strong>Architectural Thinking for Security:</strong> Structuring enterprise system layouts utilizing modern security design paradigms, evaluating threat mechanics across distributed systems, and mitigating high-risk software architectural errors.</li>
-                <li><strong>Applied Cryptographic Frameworks:</strong> Comprehensive deployment of symmetric/asymmetric data protection primitives, mathematical integrity validation algorithms, hashing structures, and public-key infrastructure configurations[cite: 815].</li>
-                <li><strong>Ethical Hacking & Penetration Testing:</strong> Practical simulation of structured defensive perimeter bypass testing, target vulnerability discovery routines, web platform exploitation scripts, and secure reporting[cite: 815].</li>
+                <li><strong>Applied Cryptographic Frameworks:</strong> Comprehensive deployment of symmetric/asymmetric data protection primitives, mathematical integrity validation algorithms, hashing structures, and public-key infrastructure configurations.</li>
+                <li><strong>Ethical Hacking & Penetration Testing:</strong> Practical simulation of structured defensive perimeter bypass testing, target vulnerability discovery routines, web platform exploitation scripts, and secure reporting.</li>
                 <li><strong>Digital Forensics & Incident Analysis:</strong> Practical evaluation of system memory dumps, non-destructive file system extraction paradigms, data recovery lifecycles, and reconstructing hostile network execution lines.</li>
-                <li><strong>Cybercrime Analysis & Enterprise Security Governance:</strong> Implementing international operational frameworks (NIST, ISO/IEC 27001), corporate risk asset mapping, threat group behavior modeling, and enterprise compliance planning[cite: 815].</li>
+                <li><strong>Cybercrime Analysis & Enterprise Security Governance:</strong> Implementing international operational frameworks (NIST, ISO/IEC 27001), corporate risk asset mapping, threat group behavior modeling, and enterprise compliance planning.</li>
             </ul>
         </div>
 
